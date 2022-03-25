@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+            <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+<h2>User login</h2>
+    {% if message %} {{message}} {% endif %}
+    <form method="POST">
+        <input type="text" name="username" placeholder="username">
+        <br>
+        <input type="password" name="password" placeholder="password">
+        <br>
+        <input type="submit" value="Submit">
+        <input type="reset" value="reset">
+    </form>
+<a href="register.html">
+    <button>register</button>
+</a>
+
+</body>
+</html>
