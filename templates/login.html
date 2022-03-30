@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>test</title>
-            <link rel="stylesheet" href="CSS/style.css">
+    <title>Login</title>
+    <meta name="content-type" charset="UTF-8">
+    <link href="{{ url_for('static', filename='CSS/login.css') }}" rel="stylesheet">
 </head>
-<body>
-<h2>User login</h2>
-    {% if message %} {{message}} {% endif %}
-    <form method="POST">
-        <input type="text" name="username" placeholder="username">
-        <br>
-        <input type="password" name="password" placeholder="password">
-        <br>
-        <input type="submit" value="Submit">
-        <input type="reset" value="reset">
-    </form>
-<a href="register.html">
-    <button>register</button>
-</a>
+<body id="login_baby">
 
+<div id="bigBox">
+<h1>Login</h1>
+
+<form id="loginform" method="post">
+    <div class="inputBox">
+        <div class="inputText">
+            <input type="text" id="username" name="username" placeholder="Username" value="">
+        </div>
+        <div class="inputText">
+            <input type="password" id="password" name="password" placeholder="Password">
+        </div>
+    </div>
+    <div>
+        <input type="submit" id="login" name="login" value="Login" class="loginButton m-left">
+        <input type="reset" id="reset" name="reset" value="Reset" class="loginButton"><br>
+    </div>
+    <div><a href="register">Register an account</a></div>
+</form>
+</div>
 </body>
 </html>

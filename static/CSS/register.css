@@ -1,0 +1,83 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    background-image: url("../img/bgimg.jpg");	/* 背景图片 */
+    width: 1200px;
+    height: 486px;
+    background-repeat:repeat;	/* 背景图片不重复 */
+}
+
+#bigBox
+{
+    margin: auto 0px;
+    margin-top: 90px;
+    padding: 20px 50px;
+    background-color: #00000090;
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#bigBox h1
+{
+    color: white;
+    font-family: "Comic Sans MS";
+}
+
+#bigBox.inputBox
+{
+    margin-top: 15px;
+}
+
+#bigBox.inputBox.inputText
+{
+    margin-top: 6px;
+}
+
+#bigBox.inputBox.inputText input
+{
+    border: 0;
+    padding: 10px 10px;
+    border-bottom: 1px solid white;
+    background-color: #00000000;
+    color: white;
+}
+
+#bigBox.loginButton
+{
+    margin-right: 30px;
+    margin-top: 14px;
+    width: 100px;
+    height: 25px;
+    color: white;
+    border: 0;
+    border-radius: 20px;
+    background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);	/* 按钮颜色 */
+}
+
+.m-left{
+    margin-left: 40px;
+
+}
+
+.m-plc{
+    margin-right: 30px;
+    margin-top: 30px;
+}
+
+.register{
+    position: absolute;
+    margin-bottom: 1000px;
+    right: 10px;
+    color: #ffffff;
+    left:  calc(5% - 200px);
+    margin-right:700px;
+    bottom: 240px;
+    font-size: 13px;
+    color: white;
+    bottom: 70px;
+}
+
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NEW POST</title>
+    <meta name="content-type"; charset="UTF-8">
+        <link href="{{ url_for('static', filename='CSS/new.css') }}" rel="stylesheet">
+</head>
+<body>
+<div id="bigBox">
+        <h1>NEW POST</h1>
+
+        <form  method="post">
+            <div class="inputBox">
+
+                <div class="inputText">
+                <input type="text" id="id_name" name="p_title" required="required" placeholder="post title">
+                </div>
+
+                <div class="inputText">
+                <input type="text" id="id_type" name="p_type" required="required" placeholder="post type">
+                </div>
+
+                <div class="inputText">
+                <textarea rows="15" id="" name="p_content" required="required" cols="30" placeholder="post content">post content</textarea>
+                </div>
+            </div>
+            <div>
+                <input type="submit" id="register" name="register" value="submit" class="loginButton m-left">
+                <input type="reset" id="reset" name="reset" value="reset" class="loginButton">
+            </div>
+
+            <div class="register">
+            <a href="login" style="color: white">I have an account, go to log in</a>
+            </div>
+        </form>
+</div>
+</body>
+</html>
+

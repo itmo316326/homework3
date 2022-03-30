@@ -2,10 +2,58 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>profile</title>
-        <link rel="stylesheet" href="CSS/style.css">
+    <title>rookie information library</title>
+    <link href="{{ url_for('static', filename='CSS/profile.css') }}" rel="stylesheet" >
 </head>
-<body>
- {% if session.get("username") %} {{session.get("username")}} {% endif %}
-</body>
+<div class="header">
+    <div class="head-img" align="left">
+        <img src="/static/img/ico.jpg">
+    </div>
+    <div>
+        <h1>Let's start with the rookie together.</h1>
+        <p align="right">HELLO:{% if session.get("username") %} {{session.get("username")}} {% endif %}</p>
+    </div>
+</div>
+
+<div class="navbar">
+    <a href="#">Home</a>
+    <a href="#">My message</a>
+    <a href="setico">SET ICO</a>
+    <a href="#">Q&A</a>
+    <a href="logout" class="right">logout</a>
+
+</div>
+
+<div class="row">
+    <div class="side">
+        <h2>About me</h2>
+        <h5>My Photo:</h5>
+        <div class="fakeimg" ><img src="../static/img/bgimg.jpg" class="img"></div>
+        <p>About my introduction..</p>
+        <h3>more content</h3>
+        <p>more of my content</p>
+        <div class="fakeimg" ><img src="../static/img/1.jpg" class="img"></div><br>
+        <div class="fakeimg" ><img src="../static/img/2.jpg" class="img"></div><br>
+        <div class="fakeimg" ><img src="../static/img/3.jpg" class="img"></div>
+    </div>
+    <div class="main">
+        <div align="right" >
+            <a href="new"><img src="../static/img/jia.png" align="right" height="28px" width="28px"></a>
+        </div>
+
+        <div>
+            {% for list in post_list %}
+            <h2>{{ list["title"] }}</h2>
+            <h5>{{ list["type"] }}</h5>
+            <div class="fakeimg" style="height:200px;">
+                <p>{{ list["content"] }}</p><br>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="footer">
+        <h2>contact me</h2>
+    </div>
+</div>
 </html>

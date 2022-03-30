@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>rookie information library</title>
+    <link href="{{ url_for('static', filename='CSS/profile.css') }}" rel="stylesheet">
+</head>
+<div class="header">
+    <div>
+        <h1>Let's start with the rookie together.</h1>
+    </div>
+</div>
+
+<div class="navbar">
+    <a href="#">Home</a>
+    <a href="#">Q&A</a>
+    <a href="register" class="right">register</a>
+    <a href="login" class="right">login</a>
+
+</div>
+
+<div class="row">
+        <div>
+            {% for list in all_post %}
+            <h2>{{ list["title"] }}</h2>
+            <h5>{{ list["type"] }}</h5>
+            <div class="fakeimg" style="height:200px;">
+                <p>{{ list["content"] }}</p><br>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="footer">
+        <h2>contact we</h2>
+    </div>
+</html>
