@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <title>Title</title>
+    <meta name="content-type" charset="UTF-8">
     <link href="{{ url_for('static', filename='CSS/register.css') }}" rel="stylesheet" >
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <script type="text/javascript"></script>
 </head>
 <body>
-<div id="bigBox">
+<div id="bigBox" align="middle">
 <h1>user register</h1>
     <form method="POST">
-        <div class="inputText">
-            <input type="text" name="username" placeholder="username">
+        <div class="inputBox">
+            <div class="inputText">
+                <input type="text" name="username" placeholder="username">
+            </div>
+            <div class="inputText">
+                <input type="password" name="password" placeholder="password">
+            </div>
         </div>
-        <div class="inputText">
-        <input type="password" name="password" placeholder="password">
-        </div>
-    <input type="submit" value="Submit">
-    <input type="reset" value="reset">
+            <div>
+                <input type="submit" value="Submit" class="loginButton m-left">
+                <input type="reset" value="reset" class="loginButton">
+            </div>
     </form>
 </div>
 </body>

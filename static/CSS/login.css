@@ -17,6 +17,7 @@
     height: 300px;
     border-radius: 10px;
     text-align: center;
+    align:middle;
 }
 
 #bigBox h1
@@ -25,17 +26,17 @@
     font-family: "Comic Sans MS";
 }
 
-#bigBox.inputBox
+#bigBox .inputBox
 {
     margin-top:20px;
 }
 
-#bigBox.inputBox.inputText
+#bigBox .inputBox .inputText
 {
     margin-top:20px;
 }
 
-#bigBox.inputBox.inputText input
+#bigBox .inputBox .inputText input
 {
     border: 0;
     padding: 10px 10px;
@@ -44,7 +45,7 @@
     color: white;
 }
 
-#bigBox.loginButton
+#bigBox .loginButton
 {
     margin-right:30px;
     margin-top:40px;
