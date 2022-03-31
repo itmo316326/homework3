@@ -4,6 +4,25 @@
     <title>Login</title>
     <meta name="content-type" charset="UTF-8">
     <link href="{{ url_for('static', filename='CSS/login.css') }}" rel="stylesheet">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <script type="text/javascript">
+        var cun = /^[a-zA-Z][a-zA-Z0-9_]{5,20}$/;
+        function check_username(usernameInput){
+            var is_ok = cun.exec(usernameInput.value);
+            if(!is_ok)
+                document.getElementById('check_un_label').style.visibility="visible";
+            else
+                document.getElementById('check_un_label').style.visibility="hidden";
+        }
+        var cps = /^[a-zA-Z]\w{5,11}$/;
+        function check_userpass(check_userpassInput) {
+            var is_ok = cps.exec(check_userpassInput.value);
+            if (!is_ok)
+               document.getElementById('check_ps_label').style.visibility="visible";
+            else
+                document.getElementById('check_ps_label').style.visibility="hidden";
+        }
+    </script>
 </head>
 <body id="login_baby">
 
@@ -13,10 +32,10 @@
 <form id="loginform" method="post">
     <div class="inputBox">
         <div class="inputText">
-            <input type="text" id="username" name="username" placeholder="Username" value="">
+            <input type="text" id="username" name="username" placeholder="Username" value="" onblur="check_username(document.getElementById(username))"><label id="check_un_label" style="visibility: hidden" >Username is invalid</label>
         </div>
         <div class="inputText">
-            <input type="password" id="password" name="password" placeholder="Password">
+            <input type="password" id="password" name="password" placeholder="Password"  onblur="check_userpass(document.getElementById(password))"><label id="check_ps_label" style="visibility: hidden" >invalid password</label>
         </div>
     </div>
     <div>
@@ -26,5 +45,6 @@
     <div><a href="register">Register an account</a></div>
 </form>
 </div>
+
 </body>
 </html>
